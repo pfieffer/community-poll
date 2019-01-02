@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::GET('polls', 'PollsController@index');
+Route::GET('polls/{id}', 'PollsController@show');
