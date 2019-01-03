@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::GET('polls', 'PollsController@index');
 Route::GET('polls/{id}', 'PollsController@show');
 Route::POST('polls', 'PollsController@store');
+Route::PUT('polls/{poll}', 'PollsController@update');
