@@ -16,10 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 Route::GET('polls', 'PollsController@index');
 Route::GET('polls/{id}', 'PollsController@show');
 Route::POST('polls', 'PollsController@store');
 Route::PUT('polls/{poll}', 'PollsController@update');
 Route::DELETE('polls/{poll}', 'PollsController@delete');
 Route::ANY('errors', 'PollsController@errors');
+
+Route::apiResource('questions', 'QuestionsController');
 
