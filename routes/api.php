@@ -21,3 +21,5 @@ Route::GET('polls/{id}', 'PollsController@show');
 Route::POST('polls', 'PollsController@store');
 Route::PUT('polls/{poll}', 'PollsController@update');
 Route::DELETE('polls/{poll}', 'PollsController@delete');
+Route::ANY('errors', 'PollsController@errors');
+
