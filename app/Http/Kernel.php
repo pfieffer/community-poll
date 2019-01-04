@@ -41,7 +41,8 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
             \App\Http\Middleware\Logging::class,
-            'httpHeaders:Come work with us!!!'
+            'httpHeaders:Come work with us!!!',
+            \App\Http\Middleware\TokenAuth::class,
         ],
     ];
 
